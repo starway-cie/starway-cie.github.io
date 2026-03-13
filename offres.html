@@ -114,11 +114,39 @@
 <div id="offer-signature" class="offerContent">
   <div class="tag">Essential</div>
   <h2>Show Signature</h2>
-  <p class="priceBig">À partir de 2 900 €</p>
+  <p class="priceBig" id="signaturePrice">À partir de 2 900 €</p>
   <p>
     Format court et efficace pour un moment visuel fort, sans complexité excessive.
     C’est l’offre d’entrée de gamme, pensée pour rester simple, rapide à déployer et rentable.
   </p>
+
+  <h3>Options supplémentaires</h3>
+  <div class="customBuilder">
+    <label>
+      Durée supplémentaire
+      <select id="signatureDuration" onchange="calculateSignatureOffer()">
+        <option value="0">5 minutes (inclus)</option>
+        <option value="500">10 minutes</option>
+        <option value="1000">15 minutes</option>
+      </select>
+    </label>
+
+    <label>
+      Branding / Logo
+      <select id="signatureBranding" onchange="calculateSignatureOffer()">
+        <option value="0">Non</option>
+        <option value="800">Oui</option>
+      </select>
+    </label>
+
+    <label>
+      Musique synchronisée
+      <select id="signatureMusic" onchange="calculateSignatureOffer()">
+        <option value="0">Non</option>
+        <option value="600">Oui</option>
+      </select>
+    </label>
+  </div>
 
   <h3>Ce qui est inclus</h3>
   <ul class="bullets">
@@ -150,11 +178,40 @@
     <div id="offer-brand" class="offerContent">
   <div class="tag">Best Seller</div>
   <h2>Brand / Festival</h2>
-  <p class="priceBig">À partir de 6 900 €</p>
+  <p class="priceBig" id="brandPrice">À partir de 6 900 €</p>
   <p>
     C’est l’offre cœur de gamme : la plus équilibrée entre impact visuel, narration, branding
     et rentabilité. Elle doit devenir ton offre la plus vendue.
   </p>
+
+  <h3>Options supplémentaires</h3>
+  <div class="customBuilder">
+    <label>
+      Durée supplémentaire
+      <select id="brandDuration" onchange="calculateBrandOffer()">
+        <option value="0">10 minutes (inclus)</option>
+        <option value="1000">15 minutes</option>
+        <option value="2000">20 minutes</option>
+      </select>
+    </label>
+
+    <label>
+      Nombre de tableaux supplémentaires
+      <select id="brandScenes" onchange="calculateBrandOffer()">
+        <option value="0">2-3 tableaux (inclus)</option>
+        <option value="1500">4 tableaux</option>
+        <option value="3000">5 tableaux ou plus</option>
+      </select>
+    </label>
+
+    <label>
+      Captation vidéo / aftermovie
+      <select id="brandVideo" onchange="calculateBrandOffer()">
+        <option value="0">Non</option>
+        <option value="800">Oui</option>
+      </select>
+    </label>
+  </div>
 
   <h3>Ce qui est inclus</h3>
   <ul class="bullets">
@@ -187,11 +244,40 @@
 <div id="offer-premium" class="offerContent">
   <div class="tag">Premium</div>
   <h2>Grand Spectacle</h2>
-  <p class="priceBig">À partir de 12 900 €</p>
+  <p class="priceBig" id="premiumPrice">À partir de 12 900 €</p>
   <p>
     Offre haut de gamme pour les projets ambitieux : narration poussée, rendu cinématique,
     séquences spectaculaires et forte signature émotionnelle.
   </p>
+
+  <h3>Options supplémentaires</h3>
+  <div class="customBuilder">
+    <label>
+      Durée supplémentaire
+      <select id="premiumDuration" onchange="calculatePremiumOffer()">
+        <option value="0">15 minutes (inclus)</option>
+        <option value="2000">20 minutes</option>
+        <option value="4000">25 minutes</option>
+      </select>
+    </label>
+
+    <label>
+      Nombre de séquences supplémentaires
+      <select id="premiumSequences" onchange="calculatePremiumOffer()">
+        <option value="0">Multi-séquences (inclus)</option>
+        <option value="2500">Séquences avancées</option>
+        <option value="5000">Séquences complexes</option>
+      </select>
+    </label>
+
+    <label>
+      Effets 3D avancés
+      <select id="premium3D" onchange="calculatePremiumOffer()">
+        <option value="0">Inclus</option>
+        <option value="1500">Effets ultra-avancés</option>
+      </select>
+    </label>
+  </div>
 
   <h3>Ce qui est inclus</h3>
   <ul class="bullets">

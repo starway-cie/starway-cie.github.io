@@ -127,5 +127,86 @@ Merci de me recontacter.`
     success.textContent = "Votre devis personnalisé a bien été préparé. Vérifiez votre client mail pour l’envoyer.";
   }
 
-  window.location.href = `mailto:nathanvillain25@gmail.com?subject=${subject}&body=${body}`;
+  const mailto = `mailto:nathanvillain25@gmail.com?subject=${subject}&body=${body}`;
+  setTimeout(() => {
+    window.location.href = mailto;
+  }, 200);
+}
+
+function calculateCustomOffer() {
+  const base = 8000;
+  const values = [
+    Number(document.getElementById("customEventType")?.value || 0),
+    Number(document.getElementById("customDuration")?.value || 0),
+    Number(document.getElementById("customScenes")?.value || 0),
+    Number(document.getElementById("customBranding")?.value || 0),
+    Number(document.getElementById("customMusic")?.value || 0),
+    Number(document.getElementById("customVideo")?.value || 0),
+  ];
+
+  const total = values.reduce((acc, value) => acc + (isNaN(value) ? 0 : value), base);
+  const priceEl = document.getElementById("customOfferPrice");
+  if (priceEl) {
+    priceEl.textContent = `À partir de ${total.toLocaleString("fr-FR")} €`;
+  }
+}
+
+function calculateSignatureOffer() {
+  const base = 2900;
+  const values = [
+    Number(document.getElementById("signatureDuration")?.value || 0),
+    Number(document.getElementById("signatureBranding")?.value || 0),
+    Number(document.getElementById("signatureMusic")?.value || 0),
+  ];
+
+  const total = values.reduce((acc, value) => acc + (isNaN(value) ? 0 : value), base);
+  const priceEl = document.getElementById("signaturePrice");
+  if (priceEl) {
+    priceEl.textContent = `À partir de ${total.toLocaleString("fr-FR")} €`;
+  }
+}
+
+function calculateBrandOffer() {
+  const base = 6900;
+  const values = [
+    Number(document.getElementById("brandDuration")?.value || 0),
+    Number(document.getElementById("brandScenes")?.value || 0),
+    Number(document.getElementById("brandVideo")?.value || 0),
+  ];
+
+  const total = values.reduce((acc, value) => acc + (isNaN(value) ? 0 : value), base);
+  const priceEl = document.getElementById("brandPrice");
+  if (priceEl) {
+    priceEl.textContent = `À partir de ${total.toLocaleString("fr-FR")} €`;
+  }
+}
+
+function calculatePremiumOffer() {
+  const base = 12900;
+  const values = [
+    Number(document.getElementById("premiumDuration")?.value || 0),
+    Number(document.getElementById("premiumSequences")?.value || 0),
+    Number(document.getElementById("premium3D")?.value || 0),
+  ];
+
+  const total = values.reduce((acc, value) => acc + (isNaN(value) ? 0 : value), base);
+  const priceEl = document.getElementById("premiumPrice");
+  if (priceEl) {
+    priceEl.textContent = `À partir de ${total.toLocaleString("fr-FR")} €`;
+  }
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", () => {
+    calculateCustomOffer();
+    calculateSignatureOffer();
+    calculateBrandOffer();
+    calculatePremiumOffer();
+  });
+} else {
+  calculateCustomOffer();
+  calculateSignatureOffer();
+  calculateBrandOffer();
+  calculatePremiumOffer();
+}
 }
