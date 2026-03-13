@@ -134,7 +134,7 @@ Merci de me recontacter.`
 }
 
 function calculateCustomOffer() {
-  const base = 8000;
+  const base = 10000;
   const values = [
     Number(document.getElementById("customEventType")?.value || 0),
     Number(document.getElementById("customDuration")?.value || 0),
