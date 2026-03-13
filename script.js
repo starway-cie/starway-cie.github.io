@@ -127,32 +127,5 @@ Merci de me recontacter.`
     success.textContent = "Votre devis personnalisé a bien été préparé. Vérifiez votre client mail pour l’envoyer.";
   }
 
-  const mailto = `mailto:nathanvillain25@gmail.com?subject=${subject}&body=${body}`;
-  setTimeout(() => {
-    window.location.href = mailto;
-  }, 200);
-}
-
-function calculateCustomOffer() {
-  const base = 8000;
-  const values = [
-    Number(document.getElementById("customEventType")?.value || 0),
-    Number(document.getElementById("customDuration")?.value || 0),
-    Number(document.getElementById("customScenes")?.value || 0),
-    Number(document.getElementById("customBranding")?.value || 0),
-    Number(document.getElementById("customMusic")?.value || 0),
-    Number(document.getElementById("customVideo")?.value || 0),
-  ];
-
-  const total = values.reduce((acc, value) => acc + (isNaN(value) ? 0 : value), base);
-  const priceEl = document.getElementById("customOfferPrice");
-  if (priceEl) {
-    priceEl.textContent = `À partir de ${total.toLocaleString("fr-FR")} €`;
-  }
-}
-
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", calculateCustomOffer);
-} else {
-  calculateCustomOffer();
+  window.location.href = `mailto:nathanvillain25@gmail.com?subject=${subject}&body=${body}`;
 }
