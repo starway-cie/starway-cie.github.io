@@ -4,6 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Offres — Starway Cie</title>
+  <meta name="description" content="Découvrez les offres de spectacles de drones lumineux Starway Cie : formats courts, narratifs, premium ou sur-mesure." />
+  <meta name="theme-color" content="#0b0f1a" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -26,7 +28,7 @@
   <a href="index.html">Accueil</a>
   <a href="presentation.html">Présentation</a>
   <a href="realisations.html">Réalisations</a>
-  <a href="offres.html">Offres</a>
+  <a class="active" href="offres.html">Offres</a>
   <a href="faq.html">FAQ</a>
 
   <div class="langSwitch">
@@ -98,7 +100,7 @@
 
           <div class="customOfferRight">
             <p class="priceNote">Estimation à partir de</p>
-            <p class="customPrice">À partir de 10000 €</p>
+            <p class="customPrice">À partir de 8000 €</p>
             <button class="btn" type="button">Créer mon offre</button>
           </div>
         </article>
@@ -114,39 +116,11 @@
 <div id="offer-signature" class="offerContent">
   <div class="tag">Essential</div>
   <h2>Show Signature</h2>
-  <p class="priceBig" id="signaturePrice">À partir de 2 900 €</p>
+  <p class="priceBig">À partir de 2 900 €</p>
   <p>
     Format court et efficace pour un moment visuel fort, sans complexité excessive.
     C’est l’offre d’entrée de gamme, pensée pour rester simple, rapide à déployer et rentable.
   </p>
-
-  <h3>Options supplémentaires</h3>
-  <div class="customBuilder">
-    <label>
-      Durée supplémentaire
-      <select id="signatureDuration" onchange="calculateSignatureOffer()">
-        <option value="0">5 minutes (inclus)</option>
-        <option value="500">10 minutes</option>
-        <option value="1000">15 minutes</option>
-      </select>
-    </label>
-
-    <label>
-      Branding / Logo
-      <select id="signatureBranding" onchange="calculateSignatureOffer()">
-        <option value="0">Non</option>
-        <option value="800">Oui</option>
-      </select>
-    </label>
-
-    <label>
-      Musique synchronisée
-      <select id="signatureMusic" onchange="calculateSignatureOffer()">
-        <option value="0">Non</option>
-        <option value="600">Oui</option>
-      </select>
-    </label>
-  </div>
 
   <h3>Ce qui est inclus</h3>
   <ul class="bullets">
@@ -178,40 +152,11 @@
     <div id="offer-brand" class="offerContent">
   <div class="tag">Best Seller</div>
   <h2>Brand / Festival</h2>
-  <p class="priceBig" id="brandPrice">À partir de 6 900 €</p>
+  <p class="priceBig">À partir de 6 900 €</p>
   <p>
     C’est l’offre cœur de gamme : la plus équilibrée entre impact visuel, narration, branding
     et rentabilité. Elle doit devenir ton offre la plus vendue.
   </p>
-
-  <h3>Options supplémentaires</h3>
-  <div class="customBuilder">
-    <label>
-      Durée supplémentaire
-      <select id="brandDuration" onchange="calculateBrandOffer()">
-        <option value="0">10 minutes (inclus)</option>
-        <option value="1000">15 minutes</option>
-        <option value="2000">20 minutes</option>
-      </select>
-    </label>
-
-    <label>
-      Nombre de tableaux supplémentaires
-      <select id="brandScenes" onchange="calculateBrandOffer()">
-        <option value="0">2-3 tableaux (inclus)</option>
-        <option value="1500">4 tableaux</option>
-        <option value="3000">5 tableaux ou plus</option>
-      </select>
-    </label>
-
-    <label>
-      Captation vidéo / aftermovie
-      <select id="brandVideo" onchange="calculateBrandOffer()">
-        <option value="0">Non</option>
-        <option value="800">Oui</option>
-      </select>
-    </label>
-  </div>
 
   <h3>Ce qui est inclus</h3>
   <ul class="bullets">
@@ -244,40 +189,11 @@
 <div id="offer-premium" class="offerContent">
   <div class="tag">Premium</div>
   <h2>Grand Spectacle</h2>
-  <p class="priceBig" id="premiumPrice">À partir de 12 900 €</p>
+  <p class="priceBig">À partir de 12 900 €</p>
   <p>
     Offre haut de gamme pour les projets ambitieux : narration poussée, rendu cinématique,
     séquences spectaculaires et forte signature émotionnelle.
   </p>
-
-  <h3>Options supplémentaires</h3>
-  <div class="customBuilder">
-    <label>
-      Durée supplémentaire
-      <select id="premiumDuration" onchange="calculatePremiumOffer()">
-        <option value="0">15 minutes (inclus)</option>
-        <option value="2000">20 minutes</option>
-        <option value="4000">25 minutes</option>
-      </select>
-    </label>
-
-    <label>
-      Nombre de séquences supplémentaires
-      <select id="premiumSequences" onchange="calculatePremiumOffer()">
-        <option value="0">Multi-séquences (inclus)</option>
-        <option value="2500">Séquences avancées</option>
-        <option value="5000">Séquences complexes</option>
-      </select>
-    </label>
-
-    <label>
-      Effets 3D avancés
-      <select id="premium3D" onchange="calculatePremiumOffer()">
-        <option value="0">Inclus</option>
-        <option value="1500">Effets ultra-avancés</option>
-      </select>
-    </label>
-  </div>
 
   <h3>Ce qui est inclus</h3>
   <ul class="bullets">
@@ -371,16 +287,13 @@
 
         <div class="customResultBox">
           <p class="customEstimateLabel">Estimation de votre offre</p>
-          <p class="customEstimateValue" id="customOfferPrice">À partir de 10000 €</p>
+          <p class="customEstimateValue" id="customOfferPrice">À partir de 8000 €</p>
 
           <p class="customEstimateNote">
             Prix indicatif hors contraintes spécifiques du site, logistique et autorisations éventuelles.
           </p>
          <button class="btn" type="button" onclick="sendCustomOffer()">Envoyer mon devis personnalisé</button>
-<p id="customOfferSuccess" class="micro" style="display:none;"></p>
-<p id="customOfferSuccess" class="micro" style="display:none; margin-top:14px;">
-successEl.textContent = "Votre devis personnalisé a bien été préparé. Vérifiez votre client mail pour l’envoyer.";
-</p>
+<p id="customOfferSuccess" class="micro" style="display:none; margin-top:14px;"></p>
         </div>
       </div>
     </div>
