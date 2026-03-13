@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Starway Cie</title>
+  <meta name="description" content="Contacter Starway Cie pour toute question générale, information entreprise ou échange autour de votre projet." />
+  <meta name="theme-color" content="#0b0f1a" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <img src="assets/logo-starway.png" class="siteLogo">
+      <span class="brandName">STARWAY CIE</span>
+    </a>
+
+    <button class="burger" id="burger">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="menu" id="menu">
+      <a href="index.html">Accueil</a>
+      <a href="presentation.html">Présentation</a>
+      <a href="realisations.html">Réalisations</a>
+      <a href="offres.html">Offres</a>
+      <a href="faq.html">FAQ</a>
+
+      <div class="langSwitch">
+        <span>FR</span>
+        <span>EN</span>
+      </div>
+
+      <a class="active btn btn-sm" href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="section">
+  <div class="container">
+    <div class="sectionHead">
+      <h2>Contact</h2>
+      <p>
+        Une question, une demande d’information ou un échange autour de Starway Cie ?
+        Utilisez ce formulaire pour nous écrire directement.
+      </p>
+    </div>
+
+    <div class="contactGrid">
+
+      <form class="form" id="quoteForm">
+
+        <div class="row">
+          <label>Nom
+            <input name="name" required placeholder="Votre nom" />
+          </label>
+
+          <label>Email
+            <input type="email" name="email" required placeholder="Votre email" />
+          </label>
+        </div>
+
+        <label>Sujet
+          <input name="location" placeholder="Ex : Information, partenariat, question entreprise..." />
+        </label>
+
+        <label>Votre message
+          <textarea name="message" rows="8" required placeholder="Écrivez votre message..."></textarea>
+        </label>
+
+        <button class="btn" type="submit">Envoyer le message</button>
+
+        <p class="micro">
+          Vous pouvez aussi écrire directement à :
+          <strong>nathanvillain25@gmail.com</strong>
+        </p>
+
+      </form>
+
+      <aside class="contactAside">
+
+        <div class="panel">
+          <h3>Coordonnées</h3>
+          <p>
+            <strong>Email :</strong> nathanvillain25@gmail.com<br>
+            <strong>Tél. :</strong> +33 6 45 73 16 24<br>
+            <strong>Zone :</strong> France / Europe
+          </p>
+        </div>
+
+        <div class="panel">
+          <h3>Entreprise</h3>
+          <p style="color:var(--muted);">
+            Starway Cie développe des spectacles de drones lumineux
+            premium pour événements privés, marques, festivals
+            et projets sur-mesure.
+          </p>
+        </div>
+
+        <div class="panel">
+          <h3>Réponse</h3>
+          <p style="color:var(--muted);">
+            Une réponse est apportée selon la nature du message
+            et le type de demande.
+          </p>
+        </div>
+
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<section class="section sectionAlt">
+  <div class="container">
+    <div class="sectionHead">
+      <h2>Besoin d’un devis ?</h2>
+      <p>
+        Si votre demande concerne directement un spectacle,
+        une formule dédiée est disponible.
+      </p>
+    </div>
+
+    <div class="panel">
+      <a href="offres.html" class="btn">Voir les offres</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footerRow">
+    <div>© <span id="year"></span> Starway Cie — Drone Shows</div>
+    <div class="footerLinks">
+      <a href="presentation.html">Présentation</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
