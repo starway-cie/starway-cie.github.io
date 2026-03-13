@@ -134,7 +134,7 @@ Merci de me recontacter.`
 }
 
 function calculateCustomOffer() {
-  const base = 10000;
+  const base = 8000;
   const values = [
     Number(document.getElementById("customEventType")?.value || 0),
     Number(document.getElementById("customDuration")?.value || 0),
@@ -151,62 +151,8 @@ function calculateCustomOffer() {
   }
 }
 
-function calculateSignatureOffer() {
-  const base = 2900;
-  const values = [
-    Number(document.getElementById("signatureDuration")?.value || 0),
-    Number(document.getElementById("signatureBranding")?.value || 0),
-    Number(document.getElementById("signatureMusic")?.value || 0),
-  ];
-
-  const total = values.reduce((acc, value) => acc + (isNaN(value) ? 0 : value), base);
-  const priceEl = document.getElementById("signaturePrice");
-  if (priceEl) {
-    priceEl.textContent = `À partir de ${total.toLocaleString("fr-FR")} €`;
-  }
-}
-
-function calculateBrandOffer() {
-  const base = 6900;
-  const values = [
-    Number(document.getElementById("brandDuration")?.value || 0),
-    Number(document.getElementById("brandScenes")?.value || 0),
-    Number(document.getElementById("brandVideo")?.value || 0),
-  ];
-
-  const total = values.reduce((acc, value) => acc + (isNaN(value) ? 0 : value), base);
-  const priceEl = document.getElementById("brandPrice");
-  if (priceEl) {
-    priceEl.textContent = `À partir de ${total.toLocaleString("fr-FR")} €`;
-  }
-}
-
-function calculatePremiumOffer() {
-  const base = 12900;
-  const values = [
-    Number(document.getElementById("premiumDuration")?.value || 0),
-    Number(document.getElementById("premiumSequences")?.value || 0),
-    Number(document.getElementById("premium3D")?.value || 0),
-  ];
-
-  const total = values.reduce((acc, value) => acc + (isNaN(value) ? 0 : value), base);
-  const priceEl = document.getElementById("premiumPrice");
-  if (priceEl) {
-    priceEl.textContent = `À partir de ${total.toLocaleString("fr-FR")} €`;
-  }
-}
-
 if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", () => {
-    calculateCustomOffer();
-    calculateSignatureOffer();
-    calculateBrandOffer();
-    calculatePremiumOffer();
-  });
+  document.addEventListener("DOMContentLoaded", calculateCustomOffer);
 } else {
   calculateCustomOffer();
-  calculateSignatureOffer();
-  calculateBrandOffer();
-  calculatePremiumOffer();
-}
 }
